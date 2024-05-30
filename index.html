@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>IPTables Tool</title>
+    <link rel="icon" href="linux.png" type="image"/>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>IPTables Tool <img src="linux.png" alt="Linux Logo" style="width: 70px; vertical-align: middle;"></h1>
+        <form id="customIptablesForm">
+            <div class="form-group">
+                <label for="bypassIp">Bypass IP</label>
+                <input type="text" id="bypassIp" name="bypassIp" required>
+                <p style="font-size: 0.8em; color: #888; margin-top: 3px;">IP Address to be Ignored</p>
+            </div><br>
+            <div class="form-group">
+                <label for="alwaysAcceptIp">Always Accept IP</label>
+                <input type="text" id="alwaysAcceptIp" name="alwaysAcceptIp">
+                <p style="font-size: 0.8em; color: #888; margin-top: 3px;">IP Address to be Always Accepted by the Firewall</p>
+            </div><br>
+            <div class="form-group">
+                <label for="tcpPortsInput">Open TCP Ports</label>
+                <input type="text" id="tcpPortsInput" name="tcpPorts">
+                <p style="font-size: 0.8em; color: #888; margin-top: 3px;">TCP Ports that everyone can access (Enter multiple ports separated by comma or space)</p>
+            </div><br>
+            <div class="form-group">
+                <label for="udpPortsInput">Open UDP Ports</label>
+                <input type="text" id="udpPortsInput" name="udpPorts">
+                <p style="font-size: 0.8em; color: #888; margin-top: 3px;">UDP Ports that everyone can access (Enter multiple ports separated by comma or space)</p>
+            </div><br>
+            <div class="form-group">
+                <label for="rateLimit">Rate Limit</label>
+                <input type="text" id="rateLimit" name="rateLimit">
+                <p style="font-size: 0.8em; color: #888; margin-top: 3px;">Limits the rate of incoming connections per second</p>
+            </div><br>
+            <div class="form-group">
+                <label for="globalConnectionLimit">Global Connection Total Limit</label>
+                <input type="text" id="globalConnectionLimit" name="globalConnectionLimit">
+                <p style="font-size: 0.8em; color: #888; margin-top: 3px;">Limits the total number of incoming connections globally, which helps mitigate Denial of Service (DoS) attacks</p>
+            </div><br>
+            <div class="form-group-switch">
+                <label for="dropInvalid" class="toggle-label">Drop Invalid Packets</label>
+                <div class="toggle-switch">
+                    <input type="checkbox" id="dropInvalid" name="dropInvalid" class="toggle-checkbox">
+                    <label for="dropInvalid" class="toggle-slider"></label>
+                </div>
+                <p style="font-size: 0.8em; color: #888; margin-top: 3px;">Drops incoming packets that are invalid or malformed, which can enhance security by rejecting potentially harmful traffic.</p>
+            </div>
+            <div class="form-group-switch">
+                <label for="dropBadConn" class="toggle-label">Drop Bad Connection</label>
+                <div class="toggle-switch">
+                    <input type="checkbox" id="dropBadConn" name="dropBadConn" class="toggle-checkbox">
+                    <label for="dropBadConn" class="toggle-slider"></label>
+                </div>
+                <p style="font-size: 0.8em; color: #888; margin-top: 3px;">Rejects incoming connections that exhibit suspicious or malformed behavior, helping to protect the network from potential threats</p>
+            </div>
+            <div class="form-group-switch">
+                <label for="denyFragments" class="toggle-label">Deny fragmented packets</label>
+                <div class="toggle-switch">
+                    <input type="checkbox" id="denyFragments" name="denyFragments" class="toggle-checkbox">
+                    <label for="denyFragments" class="toggle-slider"></label>
+                </div>
+                <p style="font-size: 0.8em; color: #888; margin-top: 3px;">Blocks incoming packets that are fragmented, which can prevent certain types of network attacks that rely on fragmented packets</p>
+            </div>
+            <button type="submit" class="submitButton">Generate</button>
+        </form>
+        <div id="commandOutput" class="output"></div>
+    </div>
+    <div class="footer" style="background-color: #222; color: #fff; padding: 10px; text-align: center;">
+        <p>Made by <a href="https://github.com/eoxyn" style="color: #88d8fb; text-decoration: none; font-weight: bold;">eoxyn</a>, All rights reserved.</p>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

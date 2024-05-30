@@ -1,0 +1,134 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #222;
+  color: #e0e0e0;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 40%;
+  margin: 30px auto;
+  padding: 15px;
+  background-color: #333;
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.1);
+  border-radius: 6px;
+}
+
+h1 {
+  text-align: center;
+  color: #e0e0e0;
+  font-size: 1.5em;
+}
+
+.form-group {
+  margin-bottom: 10px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #e0e0e0;
+  font-size: 0.9em;
+}
+
+input[type="text"] {
+  width: calc(100% - 20px);
+  padding: 6px;
+  border: 1px solid #666;
+  border-radius: 3px;
+  margin-bottom: 5px;
+  background-color: #444;
+  color: #e0e0e0;
+  font-size: 0.9em;
+}
+
+.submitButton {
+  width: 100%;
+  padding: 8px;
+  background-color: #ff5722; /* Turuncu renk */
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+.submitButton:hover {
+  background-color: #e64a19; /* Hafif kırmızımsı renk */
+}
+
+.output {
+  margin-top: 15px;
+  padding: 8px;
+  background-color: #333;
+  border: 1px solid #666;
+  border-radius: 4px;
+  white-space: pre-wrap;
+  color: #e0e0e0;
+  font-size: 0.9em;
+}
+
+.port-tag {
+  display: inline-block;
+  padding: 4px 8px;
+  margin: 2px;
+  border-radius: 12px;
+  font-size: 0.8em;
+  border: 2px solid transparent;
+}
+
+.port-tag.tcp {
+  background-color: #2196f3;
+  color: #fff;
+}
+
+.port-tag.udp {
+  background-color: #4caf50;
+  color: #fff;
+}
+
+.toggle-switch {
+  position: relative;
+  display: inline-block;
+  width: 30px;
+  height: 15px;
+  margin-left: 6px;
+}
+
+.toggle-checkbox {
+  display: none;
+}
+
+.toggle-slider:before {
+  position: absolute;
+  content: "";
+  height: 12px;
+  width: 12px;
+  top: calc(50% - 6px);
+  left: 2px;
+  background-color: white;
+  transition: .4s;
+  border-radius: 50%;
+}
+
+.toggle-slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(204, 204, 204, 0.9);
+  transition: .4s;
+  border-radius: 15px;
+}
+
+input[type="checkbox"]:checked + .toggle-slider {
+  background-color: #2196f3;
+}
+
+input[type="checkbox"]:checked + .toggle-slider:before {
+  transform: translateX(15px);
+}
