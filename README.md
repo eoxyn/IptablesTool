@@ -31,9 +31,9 @@ To install and run IptablesTool, follow these steps:
 - Save Configuration: Save the current rules configuration for future use.
 - Load Configuration: Load a saved configuration to apply the rules.
 
-##Contributing
+## Contributing
 Contributions are welcome! Please fork the repository and create a pull request with your changes. Ensure your code adheres to the project's coding standards.
 
-##License
+## License
 This project is licensed under the MIT License. See the LICENSE file for details.
 
