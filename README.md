@@ -18,6 +18,5 @@ To install and run IptablesTool, follow these steps:
    git clone https://github.com/eoxyn/IptablesTool.git```
 
 2. Navigate to the project directory:
-   ```bash
-      cd IptablesTool```
+   ```cd IptablesTool```
 
