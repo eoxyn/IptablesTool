@@ -1,7 +1,4 @@
-<html> 
-<center> SON</center>
-</html>
-
+## Iptables Tool
 IptablesTool is a web-based application designed to simplify the management of Linux firewall rules using iptables. The tool provides a user-friendly interface for creating, editing, and managing iptables rules without the need for complex command-line operations.
 
 ## Features
