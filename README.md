@@ -20,3 +20,20 @@ To install and run IptablesTool, follow these steps:
    ```bash
     cd IptablesTool
 
+3. Open index.html in your preferred web browser.
+
+## Usage
+1. Open index.html in your web browser.
+2. Use the interface to manage your iptables rules:
+- Add Rule: Input the rule parameters and click "Add Rule".
+- Remove Rule: Select the rule to be removed and click "Remove Rule".
+- View Rules: Click "View Rules" to see the current iptables rules.
+- Save Configuration: Save the current rules configuration for future use.
+- Load Configuration: Load a saved configuration to apply the rules.
+
+##Contributing
+Contributions are welcome! Please fork the repository and create a pull request with your changes. Ensure your code adheres to the project's coding standards.
+
+##License
+This project is licensed under the MIT License. See the LICENSE file for details.
+
